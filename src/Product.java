@@ -19,4 +19,29 @@ public class Product {
       public String getName() {
         return this.name;
       }
+      public void setCategory(String category) {
+        this.category = category;
+      }
+      public String getCategory() {
+        return this.category;
+      }
+      public void setPrice(double price) {
+        this.price= price;
+      }
+      public double getPrice() {
+        return this.price;
+      }
+      public void setStockQuantity(int stockQuantity) {
+        this.stockQuantity = stockQuantity;
+      }
+      public int getStockQuantity() {
+        return this.stockQuantity;
+      }
+      public void displayInfo () {
+        System.out.println("ID: " + this.id);
+        System.out.println("Name: " + this.name);
+        System.out.println("Category: " + this.category);
+        System.out.println("Price: " + this.price);
+        System.out.println("Stock Quantity: " + this.stockQuantity);
+      }
 }
