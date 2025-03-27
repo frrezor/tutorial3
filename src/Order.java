@@ -53,7 +53,54 @@ public class Order {
     public void setStatus(String status) {
         this.status = status;
     }
-     public void calculateTotalValue() {
+
+
+     public int calculateTotalValue() {
+       int sum = 0;
+       for (int i = 0; i < products.length; i++) {
+           sum += products[i].getPrice()* quantities[i];
+       }
+       System.out.println("Total order value "+ sum);
+       return sum;
+     }
+
+
+     public void applyDiscount () {
+         double DiscountPriceOfOrder = 0;
+         if (customer.getLoyalCustomer()) {
+
+
+
+             for (int i = 0; i < products.length; i++) {
+                products[i].setPrice(products[i].getPrice()*0.9);
+             }
+             System.out.println("Total order value " + calculateTotalValue());
+         }
+
+
+     }
+
+     public void displayDetails() {
+        System.out.println("ID:" + id );
+
+         System.out.println();
+         System.out.println("Customer:");
+        customer.displayInfo();
+         System.out.println("Products:");
+
+        for (int i = 0; i < products.length; i++) {
+             System.out.println();
+            products[i].displayInfo();
+            System.out.println("Quantities:" + quantities[i]);
+        }
+        System.out.println("Date:"+ orderDate);
+        System.out.println("Status:"+ status);
+        System.out.println();
+        System.out.println("Total Price:" + calculateTotalValue());
+
+
+
+
 
      }
 

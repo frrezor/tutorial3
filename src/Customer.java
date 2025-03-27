@@ -41,7 +41,7 @@ public class Customer {
         return isLoyalCustomer;
     }
 
-    public void setLoyalCustomer(boolean loyalCustomer) {
+    public void setIsLoyalCustomer(boolean loyalCustomer) {
         isLoyalCustomer = loyalCustomer;
     }
      public void displayInfo() {
